@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #E8E7D9;
+    font-family: Nunito;
+    font-weight: lighter;
+    color: #001427;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Cactus Classical Serif;
+    font-weight: lighter;
+    color: #001427;
+}
+
+header {
+    background-color: #647D72;
+    width: 100vw;
+    display: flex;
+}
+
+nav ul {
+    list-style-type: none;
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #E8E7D9;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 75%;
+}
+
+#home {
+    display: grid;
+    justify-items: center;
+    width: 100vw;
+    row-gap: 0.5rem;
+    grid-template-areas: 
+    "building"
+    "location"
+    "hours";
+}
+
+#flash-designs{
+    display: grid;
+    justify-items: center;
+    width: 100vw;
+    row-gap: 1rem;
+    grid-template-areas: 
+    "building"
+    "flash1"
+    "flash2"
+    "flash3"
+    "flash4";
+}
+
+#booking-page{
+    display: grid;
+    justify-items: center;
+    width: 100vw;
+    row-gap: 1rem;
+    grid-template-areas: 
+    "building"
+    "form";
+}
+
+section {
+    width: 80%;
+}
+
+section * {
+    margin: 0.5rem 0;
+}
+
+section p {
+    width: 90%;
+    justify-self: flex-end;
+}
+
+section img{
+    width: 100%;
+    border: 3px solid #001427;
+}
+
+footer{
+    background-color: #647D72;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+footer h3 {
+    color: #E8E7D9;
+}
+
+footer *{
+    padding: 0.5rem;
+}
+
+footer a:hover,footer a:focus {
+    text-decoration: underline;
+    color: #F0C86A;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: 3px solid #647D72;
+    border-radius: 1rem;
+    background-color: #F5F6F4;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+input, textarea{
+    width: 95%;
+    border-radius: 5px;
+    border-color: #647D72;
+    border-width: 3px;
+}
+
+.height{
+    height: 2rem;
+}
+
+.link{
+    text-decoration: none;
+    color: #F4D58D;
+}
+
+.logo {
+    width: 25%;
+}
+
+.building {
+    grid-area: building;
+    justify-items: center;
+    font-size: larger;
+}
+
+.location{
+    grid-area: location;
+}
+
+.hours{
+    grid-area: hours;
+}
+
+.info {
+    flex-direction: column;
+}
+
+.flash1{
+    grid-area: flash1;
+}
+
+.flashImg{
+    width: 80%;
+}
+
+.flashImg:hover{
+    animation: grow 3s ease forwards;
+}
+
+.flash2{
+    grid-area: flash2;
+}
+
+.flash3{
+    grid-area: flash3;
+}
+.flash4{
+    grid-area: flash4;
+}
+
+.flash1, .flash2, .flash3,.flash4{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.form{
+    grid-area: form;
+}
+
+.primary-button{
+    background-color: #647D72;
+    width: 80%;
+    color: #E8E7D9;
+    border-color: #001427;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+.primary-button:hover, .primary-button:focus{
+    background-color: #001427;
+    box-shadow: 3px 5px #56545472;
+}
+
+.closed {
+    color: #BF0603;
+}
+
+@keyframes grow{
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.20;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+	
+@media screen and (min-width: 768px) {
+    #home{
+        grid-template-areas: 
+        "building hours"
+        "building hours"
+        "location hours";
+        width: 100vw;
+    }
+
+    #flash-designs{
+        display: grid;
+        justify-items: center;
+        width: 100vw;
+        row-gap: 1rem;
+        grid-template-areas: 
+        "building building"
+        "flash1 flash2"
+        "flash3 flash4";
+    }
+
+    #booking-page{
+        display: grid;
+        justify-items: center;
+        justify-self: center;
+        background-color: #E8E7D9;
+        border-radius: 1rem;
+        width: 80vw;
+        row-gap: 1rem;
+        grid-template-areas: 
+        "building"
+        "form";
+    }
+
+    .logo{
+        width: 10%;
+    }
+
+    nav {
+        width: 90%;
+        justify-content: flex-end;
+    }
+
+    nav ul {
+        width: 50%;
+    }
+
+    .info{
+        order: 2;
+    }
+
+    form{
+        width: 100%; 
+        margin: 1rem;
+    }
+
+    .background{
+        background-color: #D9D7BF;
+        padding: 2rem;
+    }
+
+    .font {
+        font-family: Nunito;
+        font-weight: lighter;
+        color: #001427;
+    }
+
+    .flash1, .flash2, .flash3,.flash4{
+        background-color: #D9D7BF;
+        padding: 1rem;
+        margin: 1rem;
+        border-radius: 1rem;
+        border: 1px #001427 solid;
+    }
+    
+    }
